@@ -1,4 +1,4 @@
-# simple-jquery-audio-play-button
+# simple-jquery/Zepto.js-audio-play-button
 simple jquery audio play button PLUGin
 
 
