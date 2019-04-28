@@ -2,8 +2,8 @@ jqzp=function(){console.log('jQuery/Zepto not found: please enable one of them!'
 	if (typeof($) === 'undefined'){	jqzp();	}else $.fn.player = function(options){
 		var e= $(this);
 		var o= $.extend({src : '' }, options);
-		genid=e.selector.substr(1)+'id';
-		$(e.selector).append( '<style type="text/css">.play{width:36px;height:34px;padding:0;margin:0;font-size:20px;color:green;font-weight:bold;} .pause{width:36px;height:34px;padding:0;margin:0;font-size:20px;color:red;font-weight:bold;} </style><audio id="'+genid+'m"><source type="audio/mpeg" >Your browser does not support the audio element.</audio>' ).append($('<input id="'+genid+'" class="b" type="button" >'));
+		genid=$(this).attr("id")+'id';
+		$(this).append( '<style type="text/css">.play{width:36px;height:34px;padding:0;margin:0;font-size:20px;color:green;font-weight:bold;} .pause{width:36px;height:34px;padding:0;margin:0;font-size:20px;color:red;font-weight:bold;} </style><audio id="'+genid+'m"><source type="audio/mpeg" >Your browser does not support the audio element.</audio>' ).append($('<input id="'+genid+'" class="b" type="button" >'));
 		$('#'+genid).addClass('play');
 		$('#'+genid).val("\u{25ba}");
 		$('audio').on('ended', function(){
